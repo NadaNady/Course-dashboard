@@ -16,7 +16,7 @@ const CourseList = () => {
   useEffect(() => {
     const isLogged = JSON.parse(localStorage.getItem('userLoggedIn')) || false;
     if(!isLogged) {
-      navigate('/');
+      navigate('/courses');
     }
     const storedCourses = JSON.parse(localStorage.getItem('courses')) || [];
     setCourses(storedCourses);

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast';
 import "@/styles/Login.css"
@@ -12,41 +12,49 @@ export default function Login() {
 
     const handleLogin = (e) => {
         e.preventDefault();
+        console.log("Entered Email:", email);
+        console.log("Entered Password:", password);
+
         localStorage.setItem('User', email);
         localStorage.setItem('password', password);
         localStorage.setItem('userLoggedIn', JSON.stringify(true));
+
+        const loggedIn = JSON.parse(localStorage.getItem("userLoggedIn"));
+        console.log("Is user logged in:", loggedIn);
+
         toast.success('LogIn successful!');
         navigate('/courses');
     };
 
 
-    return (
-        <>
-            <Header />
-            <div className="login-container">
-                <h1>Login</h1>
-                <form className="login-form" onSubmit={handleLogin}>
-                    <input
-                    type="email"
-                    placeholder="Enter Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    />
-                    <input
-                    type="password"
-                    placeholder="Enter Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                    />
-                    <button className='sign-button' type="submit">SIGN IN</button>
-                </form>
-                <div className="login-links mt-5">
-                    <a href="/register">Create Account</a>
-                    <a href="#">Forgot your password?</a>
-                </div>
+
+  return (
+    <>
+        <Header />
+        <div className="login-container">
+            <h1>Login</h1>
+            <form className="login-form" onSubmit={handleLogin}>
+                <input
+                type="email"
+                placeholder="Enter Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                />
+                <input
+                type="password"
+                placeholder="Enter Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                />
+                <button className='sign-button' type="submit">SIGN IN</button>
+            </form>
+            <div className="login-links mt-5">
+                <a href="/register">Create Account</a>
+                <a href="#">Forgot your password?</a>
             </div>
-        </>
-    )
+        </div>
+    </>
+  )
 }
