@@ -1,0 +1,82 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0f145b;
+    color: white;
+}
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding-top: 20px;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+.nav ul li a:hover {
+    color: #d51055;
+}
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+}
+.course-list-btn, .add-course-btn, .logout-btn {
+  background-color: #d51055;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(213, 16, 85, 0.2);
+}
+.course-list-btn:hover, .add-course-btn:hover, .logout-btn:hover {
+  background-color: #b00e48;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(213, 16, 85, 0.3);
+}
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #0f145b;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav ul li {
+        margin-bottom: 15px;
+    }
+}
+  

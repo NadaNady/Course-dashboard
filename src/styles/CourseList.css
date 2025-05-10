@@ -1,0 +1,50 @@
+.courseList h1{
+  text-align: center;
+  color: #d51055;
+}
+.course-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.course-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+.search-icon{
+  font-size: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.search-input {
+  min-width: 250px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  border: 2px solid lightslategray;
+  border-radius: 12px;
+  width: 40%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 420px) {
+  .course-list-header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-between;
+  }
+  .search-input {
+    text-align: center;
+    width: 70%;
+    margin-top: 10px;
+  }
+  .course-controls{
+    margin-left: 15px;
+  }
+}

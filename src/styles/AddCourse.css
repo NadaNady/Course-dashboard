@@ -1,0 +1,92 @@
+.add-course-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+    font-family: 'Segoe UI', sans-serif;
+}
+.add-course-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #0f145b;
+}
+.course-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.course-form label {
+    font-weight: 600;
+    color: #333;
+}
+.course-form input[type="text"],
+.course-form input[type="number"],
+.course-form input[type="date"],
+.course-form textarea {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+.course-form input:focus,
+.course-form textarea:focus {
+    outline: none;
+    border-color: #d51055;
+}
+.title-price {
+    padding: 5px 10px;
+    font-size: 15px;
+}
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+.submit-btn {
+    padding: 12px;
+    font-size: 16px;
+    background: #0f145b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.submit-btn:hover {
+    background: #d51055;
+    transform: scale(1.02);
+}
+.upload-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f145b;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.upload-label h4{
+    color: white;
+}
+.upload-label:hover {
+    background-color: #cb0c4f;
+    color: white;
+}
+.upload-icon {
+    color: white;
+    font-size: 24px;
+    margin-right: 10px;
+}
+.file-input {
+    display: none;
+}
+.preview-img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
